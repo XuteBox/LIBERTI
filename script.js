@@ -1,3 +1,5 @@
+/* Navigation hide on scroll */
+
 const nav = document.getElementById('navigation')
 let lastScrollY = window.scrollY
 
@@ -11,8 +13,9 @@ document.addEventListener('scroll', () => {
     lastScrollY = window.scrollY
 })
 
+/* Custom Cursor */
 
-/* const cursor = document.querySelector('.custom-cursor.site-wide')
+const cursor = document.querySelector('.custom-cursor.site-wide')
 const pointer = document.querySelector('.site-wide .pointer')
 
 document.body.addEventListener('mouseenter', () => {
@@ -35,4 +38,4 @@ document.addEventListener('mousedown', (e) => {
 
 document.addEventListener('mouseup', (e) => {
     pointer.classList.remove('active')
-}) */
+})
