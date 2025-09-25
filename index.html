@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav id="navigation">
-        <img class="navLogo" src="imgs/Liberti_Logo.svg">
+        <a><img class="navLogo" src="imgs/Liberti_Logo.svg"></a>
         <div class="navBar">
             <a>O nas</a>
             <a>O nas</a>
@@ -24,11 +24,22 @@
     </nav>
 
     <header class="head">
-        <img class="headLogo" src="imgs/Liberti_Logo.svg">
+        <img id="headLogo" class="logo" src="imgs/Liberti_Logo.svg">
         <div class="underline"></div> <!-- add an svg underline -->
     </header>
 
     <div class="content">
+        <section>
+            <h2>Náš tým</h2>
+            <div class="team-list">
+                <div class="team-member">
+                    <img src="imgs/team1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Position: CEO</p>
+                </div>
+            </div>
+        </section>
+
         <section class="tempSection">
             <h2>Template</h2>
             <ul class="uniUl">
@@ -48,6 +59,7 @@
     
     <div class="custom-cursor site-wide" inert>
         <div class="pointer"></div>
+        <div class="text" style="display: none;"></div> <!-- TODO -->
     </div>
 </body>
 

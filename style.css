@@ -9,7 +9,7 @@
 
 :root {
     --nav-height: 3em;
-    --section-height: 700px;
+    --head-height: 700px;
     --h1-size: 6em;
     --h2-size: calc(var(--h1-size) / 2);
     --h3-size: calc(var(--h1-size) / 5);
@@ -18,7 +18,7 @@
 }
 
 html, body {
-    /* cursor: none; */
+    cursor: none;
     background-color: black;
     color: white;
 }
@@ -26,14 +26,17 @@ html, body {
 /* Universal CSS */
 
 h1 {
+    display: inline-block;
     font-size: var(--h1-size);
 }
 
 h2 {
+    display: inline-block;
     font-size: var(--h2-size);
 }
 
 h3 {
+    display: inline-block;
     font-size: var(--h3-size);
 }
 
@@ -47,7 +50,6 @@ h3 {
 section {
     width: var(--section-width);
     margin: auto;
-    height: var(--section-height);
 }
 
 /* Nav */
@@ -67,11 +69,12 @@ section {
     transition: transform ease-in-out 0.2s;
 }
 
-.--hidden {
+.hidden {
     transform: translateY(calc(-1 * var(--nav-height) + 2px));
 }
 
 .navLogo {
+    display: block;
     width: max-content;
     height: calc(var(--nav-height) * 0.4);
     color: white;
@@ -88,7 +91,7 @@ section {
 /* Header */
 .head {
     width: 100%;
-    height: var(--section-height);
+    height: var(--head-height);
     text-align: center;
     display: flex;
     align-items: center;
@@ -96,15 +99,20 @@ section {
     flex-direction: column;
 }
 
-.headLogo {
+#headLogo {
     height: 15%;
     margin-bottom: 20px;
 }
+
+/* Sections */
+
+/* Tým */
 
 
 
 /* Custom Cursor */
 .custom-cursor {
+    display: none;
     position: fixed;
     pointer-events: none;
     z-index: 99;
@@ -122,13 +130,35 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transition: width 100ms, height 100ms;
+    transition: width 200ms, height 200ms;
     background-color: white;
 }
 
 .site-wide .pointer.active {
-    width: 10px;
-    height: 10px;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.site-wide .pointer.hover {
+    width: 50px;
+    height: 50px;
+}
+
+.site-wide .pointer.headHover {
+    width: 200px;
+    height: 200px;
+}
+
+.site-wide .text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    transition: width 200ms, height 200ms;
 }
 
 /* I want to try out to create a dot cursor but when you hover over anything clickable it changes to a circle cursor with a dot inside */
