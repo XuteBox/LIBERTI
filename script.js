@@ -17,7 +17,7 @@ document.addEventListener('scroll', () => {
 
 const cursor = document.querySelector('.custom-cursor.site-wide')
 const pointer = document.querySelector('.site-wide .pointer')
-const headings = document.querySelectorAll('a, h1, h2, button')
+const headings = document.querySelectorAll('a, h1, button')
 const logos = document.querySelectorAll('.logo')
 
 document.body.addEventListener('mouseenter', () => {
