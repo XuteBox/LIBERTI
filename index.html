@@ -11,9 +11,9 @@
 </head>
 <body>
     <nav id="navigation">
-        <a href="#aboutUs"><img class="navLogo" src="imgs/Liberti_Logo.svg"></a>
+        <a href="#head"><img class="navLogo" src="imgs/Liberti_Logo.svg"></a>
         <div class="navBar">
-            <a href="">O nas</a>
+            <a href="#tym">Tým</a>
             <a href="">O nas</a>
             <a href="">O nas</a>
             <a href="">O nas</a>
@@ -23,19 +23,42 @@
         </div>
     </nav>
 
-    <header class="head">
+    <header id="head">
         <img id="headLogo" class="logo" src="imgs/Liberti_Logo.svg">
         <div class="underline"></div> <!-- add an svg underline -->
     </header>
 
     <div class="content">
-        <section id="aboutUs">
+        <section id="tym">
             <h2>Náš tým</h2>
             <div class="team-list">
+                <div class="team-member right">
+                    <img src="imgs/boss.jpg" alt="Team Member 1">
+                    <div class="info">
+                        <h3>Tomáš Holčák</h3>
+                        <p>Führer</p>
+                    </div>
+                </div>
                 <div class="team-member">
-                    <img src="imgs/team1.jpg" alt="Team Member 1">
-                    <h3>John Doe</h3>
-                    <p>Position: CEO</p>
+                    <img src="imgs/designer.jpg" alt="Team Member 1">
+                    <div class="info">
+                        <h3>Tomáš Inderka</h3>
+                        <p>Hl. designer</p>
+                    </div>
+                </div>
+                <div class="team-member right">
+                    <img src="imgs/kameraman.jpg" alt="Team Member 1">
+                    <div class="info">
+                        <h3>Richard Král</h3>
+                        <p>Video produkce</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="imgs/textar.png" alt="Team Member 1">
+                    <div class="info">
+                        <h3>Filip Odstrčil</h3>
+                        <p>Textař</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -57,10 +80,10 @@
 
     </footer>
     
-    <div class="custom-cursor site-wide" inert>
+    <!-- <div class="custom-cursor site-wide" inert>
         <div class="pointer"></div>
-        <div class="text" style="display: none;"></div> <!-- TODO -->
-    </div>
+        <div class="text" style="display: none;"></div>  TODO
+    </div> -->
 </body>
 
 <script src="script.js"></script>

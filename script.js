@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
 
 /* Custom Cursor */
 
-const cursor = document.querySelector('.custom-cursor.site-wide')
+/* const cursor = document.querySelector('.custom-cursor.site-wide')
 const pointer = document.querySelector('.site-wide .pointer')
 const headings = document.querySelectorAll('a, h1, button')
 const logos = document.querySelectorAll('.logo')
@@ -28,17 +28,37 @@ document.body.addEventListener('mouseleave', () => {
     cursor.style.display = 'none';
 });
 
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('pointermove', (e) => {
     const w = cursor.clientWidth;
     const h = cursor.clientHeight;
     cursor.style.transform = `translate(${e.clientX - w / 2}px, ${e.clientY - h / 2}px)`
 })
+
+function updateCursorPosition(e) {
+    const w = cursor.clientWidth;
+    const h = cursor.clientHeight;
+    cursor.style.transform = `translate(${e.clientX - w / 2}px, ${e.clientY - h / 2}px)`;
+}
+
+document.addEventListener('mousemove', (e) => {
+    updateCursorPosition(e);
+});
+document.addEventListener('pointermove', (e) => {
+    updateCursorPosition(e);
+});
+document.addEventListener('dragover', (e) => {
+    updateCursorPosition(e);
+});
 
 document.addEventListener('mousedown', (e) => {
     pointer.classList.add('active')
 })
 
 document.addEventListener('mouseup', (e) => {
+    pointer.classList.remove('active')
+})
+
+document.addEventListener('dragend', (e) => {
     pointer.classList.remove('active')
 })
 
@@ -58,4 +78,4 @@ headings.forEach(a => {
     a.addEventListener('mouseleave', () => {
         pointer.classList.remove('hover')
     })
-})
+}) */
