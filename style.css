@@ -6,11 +6,12 @@
     font-family: Lexend, sans-serif;
     -webkit-user-drag: none;
     -moz-window-dragging: none;
-    /* cursor: none; */
+    cursor: none;
     scroll-behavior: smooth;
 }
 
 :root {
+    --bg-color: #151515;
     --nav-height: 3em;
     --head-height: 700px;
     --h1-size: 6em;
@@ -22,7 +23,7 @@
 }
 
 html, body {
-    background-color: black;
+    background-color: var(--bg-color);
     color: white;
 }
 
@@ -77,7 +78,7 @@ section {
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid white;
-    background-color: black;
+    background-color: var(--bg-color);
     padding: 0 5%;
     font-size: var(--nav-size);
     box-shadow: white 0 0 25px;
@@ -125,6 +126,29 @@ section {
 
 /* Sections */
 
+/* Služby */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.service-item {
+    flex: 1 1 30%;
+    min-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
 /* Tým */
 .team-list {
     display: flex;
@@ -167,8 +191,7 @@ section {
     width: 250px !important;
     height: 250px !important;
     object-fit: cover;
-    border: 3px solid white;
-    border-radius: 15%;
+    border-radius: 10%;
 }
 
 /* Custom Cursor */

@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
 
 /* Custom Cursor */
 
-/* const cursor = document.querySelector('.custom-cursor.site-wide')
+const cursor = document.querySelector('.custom-cursor.site-wide')
 const pointer = document.querySelector('.site-wide .pointer')
 const headings = document.querySelectorAll('a, h1, button')
 const logos = document.querySelectorAll('.logo')
@@ -78,4 +78,4 @@ headings.forEach(a => {
     a.addEventListener('mouseleave', () => {
         pointer.classList.remove('hover')
     })
-}) */
+})
